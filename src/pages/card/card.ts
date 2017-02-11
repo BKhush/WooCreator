@@ -24,9 +24,16 @@ import {Validators, FormBuilder } from '@angular/forms';
       </ion-item>
       <ion-item>
         <ion-label>Expiration Date</ion-label>
-        <ion-input type="number" formControlName="number"></ion-input>
+        <ion-input type="number" formControlName="description"></ion-input>
       </ion-item>
+    <ion-item>
+    <p align="right">
       <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
+    </p>
+    <p align="left">
+      <button ion-button type="submit" [disabled]="!todo.valid">Back</button>
+    </p>
+    </ion-item>
     </form>
   `,
 })
@@ -43,19 +50,5 @@ export class CardPage {
     }
 }
 
-export class Card {
-}
-
-
-//export class FormsPage {
-    /*
-    constructor(private formBuilder: FormBuilder) {
-        this.todo = this.formBuilder.group({
-            title: ['', Validators.required],
-            description: [''],
-        });
-    }
-    logForm() {
-        console.log(this.todo.value)
-    } */
+//export class Card {
 //}

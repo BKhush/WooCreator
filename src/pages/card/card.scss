@@ -2,4 +2,7 @@ page-form-test{
 .form-label-top, .form-label-left, .form-label-right {
 float: initial;
 }
+.form-group input {
+	display: inline-block;
+}
 }
