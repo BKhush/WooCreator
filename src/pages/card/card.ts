@@ -12,15 +12,19 @@ import {Validators, FormBuilder } from '@angular/forms';
     <ion-title>Payment</ion-title>
   </ion-navbar>
 </ion-header>
-
+    <ion-item></ion-item>
     <form [formGroup]="todo" (ngSubmit)="logForm()">
       <ion-item>
-        <ion-label>Todo</ion-label>
+        <ion-label>Name</ion-label>
         <ion-input type="text" formControlName="title"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Description</ion-label>
-        <ion-textarea formControlName="description"></ion-textarea>
+        <ion-label>Card Number</ion-label>
+        <ion-input type="text" formControlName="description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Expiration Date</ion-label>
+        <ion-input type="number" formControlName="number"></ion-input>
       </ion-item>
       <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
     </form>
